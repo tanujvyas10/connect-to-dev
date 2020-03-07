@@ -20,7 +20,7 @@ class Register extends Component{
       this.onSubmit= this.onSubmit.bind(this)
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps){// this runs when component receive new properties
       if(nextProps.errors){
         this.setState({errors:nextProps.errors})
       }
