@@ -4,6 +4,7 @@ import {
     ADD_POST ,
     GET_ERRORS,
     GET_POSTS,
+    GET_POST,
     POST_LOADING,
     DELETE_POST
     
@@ -29,7 +30,7 @@ export const addPost = postData => dispatch =>{
             )
 }
 
-//get post
+//get posts
 
 export const getPosts = () => dispatch =>{
 
@@ -49,6 +50,27 @@ export const getPosts = () => dispatch =>{
             )
 }
 
+
+
+//get post
+
+export const getPost = (id) => dispatch =>{
+
+    dispatch(setProfileLoading)
+    axios.get(`/api/posts/${id}`)
+    .then(res => 
+        dispatch({
+            type:GET_POST,
+            payload:res.data
+        })
+        )
+        .catch(err =>
+            dispatch({
+                type:GET_POSTS,
+                payload:null
+            })  
+            )
+}
 
 
 
