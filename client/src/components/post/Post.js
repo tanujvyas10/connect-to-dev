@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import CommentFeed from './CommentFeed'
 import CommentForm from './CommentForm'
 import Spinner from '../common/Spinner'
 import PostItem from '../posts/PostItem'
@@ -23,8 +24,9 @@ if(post == null || loading || Object.keys(post).length ===0){
 else{
     postContent = (
         <div>
-        <PostItem post ={post} showActions = {false} />
+              <PostItem post ={post} showActions = {false} />
               <CommentForm postId = {post._id}/>   
+            <CommentFeed postId = {post._id} comments ={post.comments}/>
         </div>
     )
 }
