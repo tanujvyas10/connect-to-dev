@@ -35,9 +35,9 @@ class Profiles extends Component {
                 <div className = "row">
                 <div className = "col-md-12">
                 <h1 className= "display-4 text-center">
-                Develoer Profiles</h1> 
+                DeveloperProfiles</h1> 
                 <p className = "lead text-center">
-                Browse and connect with Develoer</p>
+                Browse and connect with Connect-to-dev</p>
                 {profileItems}
                 </div>
                 </div>

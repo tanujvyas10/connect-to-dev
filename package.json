@@ -1,5 +1,5 @@
 {
-  "name": "devconnector",
+  "name": "Connect-to-dev",
   "version": "1.0.0",
   "description": "social connector for developer",
   "main": "server.js",
